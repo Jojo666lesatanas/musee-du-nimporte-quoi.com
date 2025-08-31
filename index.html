@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Musée du N'importe Quoi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🎨 Le Musée du N'importe Quoi</h1>
+    <nav>
+      <button onclick="showTab('home')">Accueil</button>
+      <button onclick="showTab('gallery')">Galerie</button>
+      <button onclick="showTab('add')">Ajouter</button>
+      <button onclick="showTab('settings')">Paramètres</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="tab active">
+      <h2>Bienvenue dans le chaos créatif</h2>
+      <p>Explore, crée, et rigole.</p>
+    </section>
+
+    <section id="gallery" class="tab">
+      <h2>🖼️ Galerie des œuvres</h2>
+      <div id="galleryContent"></div>
+    </section>
+
+    <section id="add" class="tab">
+      <h2>➕ Ajouter une œuvre</h2>
+      <form id="artForm">
+        <input type="text" id="title" placeholder="Titre" required />
+        <textarea id="description" placeholder="Description" required></textarea>
+        <input type="file" id="imageUpload" accept="image/*" />
+        <button type="submit">Publier</button>
+      </form>
+    </section>
+
+    <section id="settings" class="tab">
+      <h2>⚙️ Paramètres</h2>
+      <button id="toggleDark">🌙 Activer/Désactiver le mode sombre</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
